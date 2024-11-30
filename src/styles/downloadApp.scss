@@ -10,6 +10,12 @@
   .headingText {
     padding-left: 48px;
     color: #605f5f;
+    @media screen and (max-width: 768px) {
+     color: var(--primary-text-color);
+     padding-left: 0;
+     margin-bottom: 18px;
+    }
+    
   }
   .downloadRightText {
     @media screen and (max-width: 768px) {
@@ -17,9 +23,13 @@
     }
     .downloadApp {
       width: 100%;
+      
       @media screen and (max-width: 768px) {
         @include flex-center;
         justify-content: space-between;
+        svg {
+          @include wt-ht(100%, 100%);
+        }
       }
       svg:first-child {
         margin-right: 24px;
@@ -47,7 +57,7 @@
       position: relative;
       inset: 0;
       svg {
-        @include wt-ht(350px, 350px);
+        @include wt-ht(100%, 100%);
       }
     }
   }

@@ -11,7 +11,8 @@
     width: 100%;
     gap: 45px;
     @media only screen and (max-width: 768px) {
-      grid-template-columns: repeat(1, minmax(370px, 384px));
+      grid-template-columns: repeat(1, 100%);
+      gap: 12px;
     }
 
     .spaceOverviewCard {
@@ -30,9 +31,12 @@
       }
       .address {
         font-size: 20px;
-        line-height: 24.2px;
         font-weight: 600;
         color: var(--primary-text-color);
+
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
       }
       .directionsIcon {
         border: 0.47px solid #eee7e7;
@@ -41,8 +45,14 @@
         @include wt-ht(52px, 52px);
         @include flex-align-center;
         flex-direction: column;
+        @media screen and (max-width: 768px) {
+          @include wt-ht(44px, 44px);
+        }
         svg {
           @include wt-ht(18px, 18px);
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
         }
         &:hover {
           cursor: pointer;
@@ -75,9 +85,15 @@
           justify-content: center;
           border-radius: 5px;
           padding: 8px;
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
           span {
             @include flex-center;
             margin-right: 8px;
+          }
+          .divisionIcon {
+            @include wt-ht(12px, 12px);
           }
           .divisionText {
             text-shadow: 0px 1px 3px 0px #ffd04f99;
@@ -89,6 +105,9 @@
           border-radius: 6px;
           overflow-clip-margin: content-box;
           overflow: clip;
+          @media screen and (max-width: 768px) {
+           @include wt-ht(100%, 100%);
+          }
         }
       }
       .passWrapper {
@@ -96,7 +115,7 @@
         justify-content: space-between;
         margin-top: 22px;
       }
-      .dayPassWrapper {
+      .dayPassWrapper, .bulkPassWrapper {
         background-color: #f9f9f9;
         border: 0.5px solid #eee7e7;
         border-radius: 6px;
@@ -104,7 +123,6 @@
         justify-content: space-between;
         padding: 9px 12px;
         width: 100%;
-        margin-right: 12px;
         &:hover {
           cursor: pointer;
           box-shadow: rgb(183, 182, 184) 0px 3px 6px 0px;
@@ -119,67 +137,47 @@
           font-size: 14px;
           font-weight: 500;
           margin-bottom: 8px;
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+           }
+          
         }
         .dayPassPrice {
           font-size: 20px;
           font-weight: 600;
           color: var(--primary-text-color);
+          @media screen and (max-width: 768px) {
+            font-size: 18px;
+          }
         }
         .perDayText {
           font-size: 12px;
           font-weight: 500;
           color: var(--primary-text-color);
+          @media screen and (max-width: 768px) {
+            font-size: 11px;
+          }
         }
       }
       .bulkPassWrapper {
         background-color: var(--button-yellow);
         border: 1px solid var(--yellow-border);
-        border-radius: 6px;
-        padding: 9px 12px;
-        width: 100%;
-        @include flex-center;
-        justify-content: space-between;
-        position: relative;
-        &:hover {
-          cursor: pointer;
-          box-shadow: rgb(183, 182, 184) 0px 3px 6px 0px;
-        }
-        .flexWrapperColumn {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        .dayPassText {
-          color: var(--secondary-text-color);
-          font-size: 14px;
+        margin-left: 12px;
+        .discountPercent {
+          position: absolute;
+          top: -10px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          background-color: var(--primary-text-color);
+          font-size: 8px;
           font-weight: 500;
-          margin-bottom: 8px;
+          width: 69px;
+          color: var(--white);
+          padding: 4px 8px;
+          text-align: center;
+          border-radius: 3px;
         }
-        .dayPassPrice {
-          font-size: 20px;
-          font-weight: 600;
-          color: var(--primary-text-color);
-        }
-        .perDayText {
-          font-size: 12px;
-          font-weight: 500;
-          color: var(--primary-text-color);
-        }
-      }
-      .discountPercent {
-        position: absolute;
-        top: -10px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        background-color: var(--primary-text-color);
-        font-size: 8px;
-        font-weight: 500;
-        width: 69px;
-        color: var(--white);
-        padding: 4px 8px;
-        text-align: center;
-        border-radius: 3px;
       }
     }
   }
