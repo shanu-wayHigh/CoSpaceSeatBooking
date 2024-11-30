@@ -17,4 +17,5 @@ class GlobalStore {
   }
 }
 
-export default new GlobalStore();
+const globalStore = new GlobalStore();
+export default globalStore;

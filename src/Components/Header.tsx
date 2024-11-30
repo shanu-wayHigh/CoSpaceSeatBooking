@@ -7,7 +7,7 @@ const Header = () => {
     <section className='headerWrapper'>
       <header className='headerContainer container'>
         <span className='logoIcon'><LogoIcon/></span>
-        <a href='' className='callWrapper'>
+        <a href="tel:+919538677774" className='callWrapper'>
           <CallIcon />
         </a>
       </header>

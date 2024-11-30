@@ -2,7 +2,7 @@
   margin-top: 120px;
   transition: transform 0.3s;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 900px) {
     margin-top: 50px;
   }
   .spaceOverviewContainer {
@@ -10,8 +10,13 @@
     grid-template-columns: repeat(3, minmax(370px, 384px));
     width: 100%;
     gap: 45px;
+    
+    @media only screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, minmax(330px, auto));
+      gap: 12px;
+    }
     @media only screen and (max-width: 768px) {
-      grid-template-columns: repeat(1, 100%);
+      grid-template-columns: repeat(1, 1fr);
       gap: 12px;
     }
 
@@ -105,7 +110,7 @@
           border-radius: 6px;
           overflow-clip-margin: content-box;
           overflow: clip;
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 900px) {
            @include wt-ht(100%, 100%);
           }
         }
@@ -163,6 +168,7 @@
         background-color: var(--button-yellow);
         border: 1px solid var(--yellow-border);
         margin-left: 12px;
+        position: relative;
         .discountPercent {
           position: absolute;
           top: -10px;

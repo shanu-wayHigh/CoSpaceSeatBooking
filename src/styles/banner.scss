@@ -29,3 +29,16 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 900px) {
+  .bannerSection {
+    svg {
+      top: -87px;
+    }
+    .bannerText {
+      font-size: 30px;
+      width: 400px;
+    }
+  }
+}
