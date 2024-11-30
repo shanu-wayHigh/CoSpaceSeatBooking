@@ -11,15 +11,18 @@
     width: 100%;
     gap: 45px;
     
-    @media only screen and (max-width: 1200px) {
-      grid-template-columns: repeat(2, minmax(330px, auto));
+    @media only screen and (max-width: 900px) {
+      grid-template-columns: repeat(1, minmax(320px, 370px));
       gap: 12px;
-    }
-    @media only screen and (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 12px;
+      justify-content: center;
     }
 
+    @media only screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, minmax(320px, 370px));
+      justify-content: center;
+    }
+
+    
     .spaceOverviewCard {
       display: flex;
       flex-direction: column;
@@ -113,6 +116,10 @@
           @media screen and (max-width: 900px) {
            @include wt-ht(100%, 100%);
           }
+          @media screen and (max-width: 1200px) {
+            @include wt-ht(336px, 175px);
+           }
+          
         }
       }
       .passWrapper {

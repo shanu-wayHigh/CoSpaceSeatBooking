@@ -1,4 +1,4 @@
-import React from 'react'
+import React,  { ReactElement } from 'react'
 import { ReactComponent as CommunityEventsIcon } from '../static/Assets/svg/ChooseUs/communityEvents.svg'
 import { ReactComponent as GymFacilitiesIcon } from '../static/Assets/svg/ChooseUs/gymFacilities.svg'
 import { ReactComponent as WifiIcon } from '../static/Assets/svg/ChooseUs/wifi.svg'
@@ -8,7 +8,12 @@ import { ReactComponent as QuickBookingIcon } from '../static/Assets/svg/ChooseU
 import { ReactComponent as ComfortableLoungesIcon } from '../static/Assets/svg/ChooseUs/comfortLounges.svg'
 import { ReactComponent as SportsAreaIcon } from '../static/Assets/svg/ChooseUs/sportsArea.svg'
 
-const ChooseUsData = [
+export interface dataProps {
+  name: string;
+  icon: ReactElement;
+}
+
+const ChooseUsData: dataProps[] = [
   {
     name: 'Community Events',
     icon: <CommunityEventsIcon />
@@ -50,7 +55,7 @@ const ChooseUs = () => {
         Why Choose us?
       </h2>
       <div className='chooseUsContainer'>
-        {ChooseUsData.map(item => {
+        {ChooseUsData.map((item: dataProps) => {
           return (
             <div className='chooseUsField'>
               <span className='fieldIcon'>{item.icon}</span>

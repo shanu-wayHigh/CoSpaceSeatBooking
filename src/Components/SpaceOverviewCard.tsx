@@ -4,14 +4,7 @@ import { ReactComponent as DayPassIcon } from '../static/Assets/svg/dayPass.svg'
 import { ReactComponent as PremiumIcon } from '../static/Assets/svg/premium.svg'
 import { ReactComponent as PlatinumIcon } from '../static/Assets/svg/platinum.svg'
 import { ReactComponent as WorkSpaceIcon } from '../static/Assets/svg/workSpace.svg'
-
-type PropsType = {
-  name: string,
-  address: string,
-  images: string[],
-  google_maps_url: string,
-  day_pass_price: number
-}
+import { PropsType } from '../Store/store'
 
 const SpaceOverviewCard = (props: PropsType) => {
   const { name = "", address = '', images = [], google_maps_url = '', day_pass_price = 0 } = props || {}

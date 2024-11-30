@@ -22,7 +22,7 @@ const App = observer(() => {
   };
 
   const handleResize = () => {
-    globalStore.setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed   
+    globalStore.setIsMobile(window.innerWidth <= 768); 
   };
 
 

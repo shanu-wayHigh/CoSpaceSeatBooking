@@ -1,10 +1,10 @@
 import React from 'react'
-import globalStore from '../Store/store'
+import globalStore, { PropsType } from '../Store/store'
 import SpaceOverviewCard from './SpaceOverviewCard'
 import { observer } from 'mobx-react';
 
 const SpaceOverview = observer(() => {
-  const data = globalStore?.data as [];
+  const data = globalStore?.data as PropsType[];
 
   return (
     <section className='spaceOverviewWrapper'>

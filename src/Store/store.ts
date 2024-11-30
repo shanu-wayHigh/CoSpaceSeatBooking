@@ -1,14 +1,22 @@
 import { makeAutoObservable } from "mobx";
 
+export type PropsType = {
+  name: string,
+  address: string,
+  images: string[],
+  google_maps_url: string,
+  day_pass_price: number
+}
+
 class GlobalStore {
-  data = {};
-  isMobile = false;
+  data: PropsType[] = [];
+  isMobile: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  setData = (value = {}) => {
+  setData = (value = []) => {
     this.data = value;
   };
 

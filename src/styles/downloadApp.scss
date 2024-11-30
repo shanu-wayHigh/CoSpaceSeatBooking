@@ -2,7 +2,7 @@
   margin-top: 120px;
   color: #605f5f;
   position: relative;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     margin-top: 50px;
     margin-bottom: 18px;
   }
@@ -10,7 +10,7 @@
     padding-left: 48px;
     color: #605f5f;
     margin-bottom: 40px;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1200px) {
      color: var(--primary-text-color);
      padding-left: 0;
      margin-bottom: 18px;
@@ -24,9 +24,10 @@
     .downloadApp {
       width: 100%;
       
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1200px) {
         @include flex-center;
         justify-content: space-between;
+        margin-top: 12px;
         svg {
           @include wt-ht(100%, 100%);
         }
@@ -43,7 +44,7 @@
     margin: 0px;
     width: 540px;
     margin-bottom: 40px;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1200px) {
       display: none;
     }
   }
@@ -53,18 +54,12 @@
     bottom: 0;
     left: 32px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       position: relative;
       inset: 0;
       svg {
         @include wt-ht(100%, 100%);
       }
-    }
-
-    @media screen and (max-width: 900px) {
-      height: 300px;
-      inset: 0;
-      position: relative;
     }
   }
   .downloadAppContainer {
@@ -77,10 +72,11 @@
     margin: 200px 0px 40px;
     box-shadow: rgb(224, 224, 224) 0px 1px 8px 0px;
     position: relative;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1200px) {
       margin: 0;
       padding: 40px 12px;
       margin-bottom: 32px;
+      align-items: center;
     }
   }
 }
