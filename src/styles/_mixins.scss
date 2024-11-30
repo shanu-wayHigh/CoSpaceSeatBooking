@@ -1,0 +1,15 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-align-center($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin wt-ht($wt, $ht) {
+  width: $wt;
+  height: $ht;
+}

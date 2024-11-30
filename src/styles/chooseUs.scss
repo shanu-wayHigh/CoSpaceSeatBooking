@@ -1,0 +1,57 @@
+.chooseUsWrapper {
+  .chooseUsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+  .chooseUsField {
+    @include flex-center;
+    padding: 24px;
+    gap: 16px;
+    transition: transform 0.3s;
+    &:hover {
+      background: var(--white);
+      transform: translate(5px, -5px);
+    }
+    &:not(:nth-child(4)):not(:nth-child(8)) {
+      border-right: 0.5px solid var(--gray5);
+    }
+    &:nth-child(-n + 4) {
+      border-bottom: 0.5px solid var(--gray5);
+    }
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 0 !important;
+      box-shadow: 0px 2px 4px 0px #0000000f;
+      background-color: var(--white);
+      border-radius: 6px;
+    }
+  }
+  .fieldIcon {
+    @include wt-ht(32px, 32px);
+    @include flex-center;
+    @media only screen and (max-width: 768px) {
+      @include wt-ht(28px, 28px);
+    }
+  }
+  .fieldName {
+    color: var(--primary-text-color);
+    font-size: 18px;
+    line-height: 21.78px;
+    font-weight: 500;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 16.94px;
+    }
+  }
+}

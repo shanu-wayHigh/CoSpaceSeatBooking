@@ -1,0 +1,21 @@
+.headerWrapper {
+  box-shadow: rgb(224, 224, 224) 0px 1px 3px 1px;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  background-color: var(--white);
+  position: fixed;
+  z-index: 2;
+  .headerContainer {
+    @include flex-center;
+    justify-content: space-between;
+    height: 90px;
+    background-color: var(--white);
+  }
+  .callWrapper {
+    @include flex-center;
+    border: 1px solid var(--primary1-logo-color);
+    @include wt-ht(42px, 42px);
+    justify-content: center;
+    box-shadow: 4px 4px 14px 0px #0000000f;
+  }
+}

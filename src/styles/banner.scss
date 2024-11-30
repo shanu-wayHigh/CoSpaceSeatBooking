@@ -1,0 +1,31 @@
+.bannerContainer {
+  width: 100%;
+}
+.bannerSection {
+  position: relative;
+  @include wt-ht(100%, 100%);
+  svg {
+    width: 100%;
+    position: relative;
+    top: -70px;
+    height: 500px;
+    @media only screen and (max-width: 768px) {
+      height: fit-content;
+    }
+  }
+  .bannerText {
+    width: 52%;
+    color: var(--primary-text-color);
+    position: absolute;
+    top: 70px;
+    font-size: 58px;
+    margin: 0;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+      width: 100%;
+      top: 90%;
+      text-align: center;
+    }
+  }
+}
