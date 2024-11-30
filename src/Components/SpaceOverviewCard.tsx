@@ -37,7 +37,7 @@ const SpaceOverviewCard = (props: PropsType) => {
         <p className='address'>{name}</p>
         <span className='directionsIcon' onClick={handleMapClick}>
           <DirectionsIcon />
-          <p className='staticKms'>6kms</p>
+          <p className='staticKms'>6 kms</p>
         </span>
       </div>
       <div className='imgCard'>

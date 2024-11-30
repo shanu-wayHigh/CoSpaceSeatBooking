@@ -10,11 +10,6 @@
     justify-content: space-between;
     height: 90px;
     background-color: var(--white);
-    .logoIcon {
-      @media screen and (max-width: 768px) {
-        @include wt-ht(100px, 32px);
-      }
-    }
   }
   .callWrapper {
     @include flex-center;
@@ -22,8 +17,18 @@
     @include wt-ht(42px, 42px);
     justify-content: center;
     box-shadow: 4px 4px 14px 0px #0000000f;
+  }
+}
 
-    @media screen and (max-width: 768px) {
+// Mobile view
+@media screen and (max-width: 768px) {
+  .headerWrapper {
+    .headerContainer {
+      .logoIcon {         
+         @include wt-ht(100px, 32px);
+      }
+    }
+    .callWrapper {
       @include wt-ht(36px, 36px);
     }
   }
