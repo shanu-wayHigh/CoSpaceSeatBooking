@@ -2,15 +2,14 @@ import React from 'react'
 import globalStore, { PropsType } from '../Store/store'
 import SpaceOverviewCard from './SpaceOverviewCard'
 import { observer } from 'mobx-react';
+import HeadingText from './HeadingText';
 
 const SpaceOverview = observer(() => {
   const data = globalStore?.data as PropsType[];
 
   return (
     <section className='spaceOverviewWrapper'>
-      <h2 className='headingText'>
-        {globalStore?.isMobile ? "Our Spaces" : "Our Space Overview"}
-      </h2>
+      <HeadingText text={globalStore?.isMobile ? "Our Spaces" : "Our Space Overview"}/>
       <div className='spaceOverviewContainer'>
         {data?.length > 0 && data?.map((item: any, index: number) =>
           <SpaceOverviewCard {...item} key={`${item?.id}-${index}`} />

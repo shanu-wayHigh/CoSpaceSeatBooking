@@ -2,13 +2,12 @@ import React from 'react'
 import { ReactComponent as DownloadAppIcon } from '../static/Assets/svg/downloadApp.svg'
 import { ReactComponent as GooglePlayIcon } from '../static/Assets/svg/DownloadApp/googlePlay.svg'
 import { ReactComponent as AppStoreIcon } from '../static/Assets/svg/DownloadApp/appStore.svg'
+import HeadingText from './HeadingText'
 
 const DownloadApp = () => {
   return (
     <section className='downloadAppWrapper'>
-      <h2 className='headingText'>
-        Download our app now
-      </h2>
+      <HeadingText text="Download our app now"/> 
       <div className='downloadAppContainer'>
         <span className='downloadAppIcon'>
           <DownloadAppIcon />

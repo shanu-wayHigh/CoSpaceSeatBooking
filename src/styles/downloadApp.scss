@@ -6,16 +6,17 @@
     margin-top: 50px;
     margin-bottom: 18px;
   }
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 0;
+  }
   .headingText {
     padding-left: 48px;
     color: #605f5f;
-    margin-bottom: 40px;
     @media screen and (max-width: 1200px) {
      color: var(--primary-text-color);
      padding-left: 0;
-     margin-bottom: 18px;
     }
-    
   }
   .downloadRightText {
     @media screen and (max-width: 900px) {
@@ -32,6 +33,14 @@
           @include wt-ht(100%, 100%);
         }
       }
+
+      @media screen and (max-width: 900px) {
+        justify-content: center;
+        svg {
+          @include wt-ht(200px, 60px)
+        }
+      }
+
       svg:first-child {
         margin-right: 24px;
       }
@@ -61,6 +70,14 @@
         @include wt-ht(100%, 100%);
       }
     }
+
+    @media screen and (max-width: 900px) {
+      position: relative;
+      inset: 0;
+      svg {
+        @include wt-ht(100%, 392px);
+      }
+    }
   }
   .downloadAppContainer {
     display: flex;
@@ -77,6 +94,16 @@
       padding: 40px 12px;
       margin-bottom: 32px;
       align-items: center;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin: 0;
+      padding: 40px 12px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 12px;
+      margin-bottom: 32px;
     }
   }
 }

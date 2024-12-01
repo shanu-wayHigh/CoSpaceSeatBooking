@@ -7,6 +7,7 @@ import { ReactComponent as AffordableIcon } from '../static/Assets/svg/ChooseUs/
 import { ReactComponent as QuickBookingIcon } from '../static/Assets/svg/ChooseUs/quickBooking.svg'
 import { ReactComponent as ComfortableLoungesIcon } from '../static/Assets/svg/ChooseUs/comfortLounges.svg'
 import { ReactComponent as SportsAreaIcon } from '../static/Assets/svg/ChooseUs/sportsArea.svg'
+import HeadingText from './HeadingText'
 
 export interface dataProps {
   name: string;
@@ -51,9 +52,7 @@ const ChooseUsData: dataProps[] = [
 const ChooseUs = () => {
   return (
     <section className='chooseUsWrapper'>
-      <h2 className='headingText'>
-        Why Choose us?
-      </h2>
+      <HeadingText text="Why Choose Us?"/>
       <div className='chooseUsContainer'>
         {ChooseUsData.map((item: dataProps) => {
           return (

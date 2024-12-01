@@ -22,6 +22,19 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
+  margin: 0;
+}
+
+.content {
+  @media screen and (max-width: 900px){
+    top: -94px;
+    position: relative;
+  }
+
+  @media screen and (max-width: 768px){
+    top: 0;
+    padding-top: 50px;
+  }
 }
 
 .container,
@@ -201,14 +214,34 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary1-logo-color);
 }
 
+.flexWrapper {
+  @include flex-center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 18px;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .rightArrowIcon {
+    @include wt-ht(24px, 24px);
+    @include flex-center;
+    cursor: pointer;
+    svg {
+      fill: var(--primary1-logo-color);
+    }
+  }
+}
+
 .headingText {
   font-size: 36px;
   color: var(--primary-text-color);
-  margin-bottom: 40px;
   letter-spacing: 0.3px;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 900px) {
     font-size: 24px;
-    margin-bottom: 30px;
   }
 }
