@@ -12,6 +12,7 @@ class GlobalStore {
   data: PropsType[] = [];
   isMobile: boolean = false;
   isLoading: boolean = true;
+  showDivision: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -27,6 +28,10 @@ class GlobalStore {
 
   setIsLoading = (value = false) => {
     this.isLoading = value;
+  }
+
+  setShowDivision = (value = false) => {
+    this.showDivision = value;
   }
 }
 

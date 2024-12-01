@@ -4,9 +4,10 @@ import { ReactComponent as DayPassIcon } from '../static/Assets/svg/dayPass.svg'
 import { ReactComponent as PremiumIcon } from '../static/Assets/svg/premium.svg'
 import { ReactComponent as PlatinumIcon } from '../static/Assets/svg/platinum.svg'
 import { ReactComponent as WorkSpaceIcon } from '../static/Assets/svg/workSpace.svg'
-import { PropsType } from '../Store/store'
+import globalStore, { PropsType } from '../Store/store'
+import { observer } from 'mobx-react'
 
-const SpaceOverviewCard = (props: PropsType) => {
+const SpaceOverviewCard = observer((props: PropsType) => {
   const { name = "", address = '', images = [], google_maps_url = '', day_pass_price = 0 } = props || {}
   const updatedImg = `https://github.com/MujtabaKably/bhive-interview-project-data/blob/main/${images[0]}?raw=true`;
   let division = 'Premium';
@@ -34,10 +35,11 @@ const SpaceOverviewCard = (props: PropsType) => {
         </span>
       </div>
       <div className='imgCard'>
-        <div className='division'>
+      {globalStore.showDivision ? <div className='division'>
           <span className='divisionIcon'>{icon}</span>
           <span className='divisionText'>{division}</span>
-        </div>
+        </div> : <></>
+      }
         <div className='imageContainer'>
           <img className='image' alt={`${name}-image`} src={updatedImg} />
         </div>
@@ -69,7 +71,7 @@ const SpaceOverviewCard = (props: PropsType) => {
       </div>
     </div>
   )
-};
+});
 
 export { SpaceOverviewCard }
 export default SpaceOverviewCard

@@ -118,9 +118,9 @@
           overflow: hidden;
         }
         .image {
-          animation: slideInY 2s ease-in-out;
+          animation: slideInY 1.5s ease-in-out;
           transition: transform all 0.3s;
-          transform-origin: 50% 50%;
+          transform-origin: 50% 50% 0;
           @include wt-ht(100%, auto);
           border-radius: 6px;
           object-fit: contain;

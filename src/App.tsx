@@ -15,6 +15,9 @@ const App = observer(() => {
       const response = await fetch(urlData?.spaceOverview);
       const data = await response.json();
       globalStore.setIsLoading(false);
+      setTimeout(() => {
+        globalStore.setShowDivision(true);
+      }, 2000);
       await globalStore.setData(data);
 
     } catch (error) {
