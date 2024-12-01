@@ -20,9 +20,6 @@
       "@/components/*": ["./src/components/*"],
       "@/static/*": ["./src/static/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/typings/*": ["./src/typings/*"],
-      "@/context/*": ["./src/context/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

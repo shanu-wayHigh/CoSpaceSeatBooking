@@ -1,5 +1,5 @@
 import React from 'react';
-import globalStore from 'src/Store/store';
+import globalStore from '../Store/store'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { observer } from 'mobx-react';
 

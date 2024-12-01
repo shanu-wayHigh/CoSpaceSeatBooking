@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <section className='headerWrapper'>
       <header className='headerContainer container'>
-        <a href='#' className='logoIcon'><LogoIcon/></a>
+        <span onClick={() => window.location.reload()} className='logoIcon'><LogoIcon/></span>
         <a href="tel:+919538677774" className='callWrapper'>
           <CallIcon />
         </a>
