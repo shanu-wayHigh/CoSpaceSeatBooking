@@ -8,7 +8,7 @@ const Banner = observer(() => {
   return (
     <section className='bannerSection'>
       {globalState?.isMobile ? <BackgroundBannerMobile /> : < BackgroundBanner />}
-      <div className='bannerContainer'>
+      <div className='bannerContainer container'>
         <h1 className='bannerText heading1'>
           <span>Host your meeting with world-class amenities.</span>
           {globalState?.isMobile ? <></> : < br />}

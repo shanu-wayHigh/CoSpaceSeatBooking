@@ -37,8 +37,8 @@ const App = observer(() => {
   return (
     <div className="App">
       <Header />
+      <Banner />
       <main className='content container'>
-        <Banner />
         <ChooseUs />
         <SpaceOverview />
         <DownloadApp />
