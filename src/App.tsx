@@ -14,6 +14,7 @@ const App = observer(() => {
     try {
       const response = await fetch(urlData?.spaceOverview);
       const data = await response.json();
+      globalStore.setIsLoading(false);
       await globalStore.setData(data);
 
     } catch (error) {

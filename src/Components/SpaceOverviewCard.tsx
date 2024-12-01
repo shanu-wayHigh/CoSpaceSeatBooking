@@ -38,7 +38,9 @@ const SpaceOverviewCard = (props: PropsType) => {
           <span className='divisionIcon'>{icon}</span>
           <span className='divisionText'>{division}</span>
         </div>
-        <img className='image' alt={`${name}-image`} src={updatedImg} />
+        <div className='imageContainer'>
+          <img className='image' alt={`${name}-image`} src={updatedImg} />
+        </div>
       </div>
       <div className='passWrapper'>
         <div className='dayPassWrapper'>

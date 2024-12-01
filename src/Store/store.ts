@@ -11,6 +11,7 @@ export type PropsType = {
 class GlobalStore {
   data: PropsType[] = [];
   isMobile: boolean = false;
+  isLoading: boolean = true;
 
   constructor() {
     makeAutoObservable(this);
@@ -22,6 +23,10 @@ class GlobalStore {
 
   setIsMobile = (value = false) => {
     this.isMobile = value;
+  }
+
+  setIsLoading = (value = false) => {
+    this.isLoading = value;
   }
 }
 

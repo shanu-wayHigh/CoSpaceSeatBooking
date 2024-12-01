@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <section className='headerWrapper'>
       <header className='headerContainer container'>
-        <span className='logoIcon'><LogoIcon/></span>
+        <a href='#' className='logoIcon'><LogoIcon/></a>
         <a href="tel:+919538677774" className='callWrapper'>
           <CallIcon />
         </a>
