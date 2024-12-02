@@ -15,8 +15,12 @@ const DownloadApp = () => {
         <div className='downloadRightText'>
           <p className='downloadAppText'>Boost your productivity with the BHIVE Workspace app. Elevate your workspace, collaborate efficiently, and unlock exclusive perks.</p>
           <div className='downloadApp'>
-            <GooglePlayIcon />
-            <AppStoreIcon />
+            <a href='https://play.google.com/store/apps/details?id=com.bhive.workspace&pli=1' target='_blank'>
+              <GooglePlayIcon />
+            </a>
+            <a href='https://apps.apple.com/in/app/bhive-workspace/id6463923684' target='_blank'>
+              <AppStoreIcon/>
+            </a>
           </div>
         </div>
       </div>

@@ -24,6 +24,9 @@
     }
     .downloadApp {
       width: 100%;
+      svg {
+        cursor: pointer;
+      }
       
       @media screen and (max-width: 1200px) {
         @include flex-center;

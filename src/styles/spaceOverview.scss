@@ -33,10 +33,12 @@
       border: 1.08px solid #eee7e7;
       padding: 14px 12px;
       background-color: var(--white);
+      transition: all 0.3s ease;
       .addressCard {
         @include flex-align-center;
         justify-content: space-between;
         margin-bottom: 16px;
+        transition: all 0.3s ease;
       }
       .address {
         font-size: 20px;
@@ -78,6 +80,7 @@
       .imgCard {
         position: relative;
         @include wt-ht(100%, 100%);
+        transition: all 0.3s ease;
         .division {
           position: absolute;
           top: 8px;
