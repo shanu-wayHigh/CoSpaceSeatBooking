@@ -7,7 +7,7 @@
   }
   .spaceOverviewContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, calc(33.3% - 30px));
     width: 100%;
     gap: 45px;
     justify-content: center;
